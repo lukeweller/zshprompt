@@ -1,0 +1,9 @@
+# MY CONFIG
+
+# Custom prompt
+
+PROMPT="%F{240}(%f%(?.%F{green}√.%F{red}%?)%f%F{240})%f %B%F{240}%~%f%b %# "
+
+# Default ls to color
+
+alias ls="ls --color=auto"
