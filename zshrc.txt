@@ -1,9 +1,30 @@
-# MY CONFIG
+# CUSTOM CONFIG
+# ---------
 
 # Custom prompt
+PROMPT="%F{240}[%f%(?.%F{green}✓.%F{red}%?%f)%F{240}]%f %F{214}%n%f@%m %B%F{blue}%~%f%b %# "
 
-PROMPT="%F{240}(%f%(?.%F{green}√.%F{red}%?)%f%F{240})%f %B%F{240}%~%f%b %# "
+# Add personal ~/bin to path
+PATH=$PATH:~/bin
+
+# CUSTOM ALIASES
+# --------------
 
 # Default ls to color
-
 alias ls="ls --color=auto"
+
+# Add macOS-style open
+alias open="xdg-open"
+
+# Adds keyword for easier screenshots
+alias snip="gnome-screenshot -a"
+
+# Alters behavior of 'which' in order to enable commands in bg-vault-client while using zsh
+alias which="command which"
+
+# TL;DR from Jacob Thomas:
+#  * which in zsh is a builtin instead of a command
+#  * bg-vault-client uses which as a command
+#  * adding [alias which="command which"] to your ~/.zshrc forces
+#	 zsh to use the command which instead of the builtin, which
+#	 forces bg-vault-client work as expected
