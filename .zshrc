@@ -26,8 +26,8 @@ alias pip3-upgrade="pip3 list --outdated | cut -d ' ' -f 1 | tail -n +3 | xargs 
 
 # Enable and disable the touch-screen device on Ubuntu laptop (ELAN29E2:00 04F3:29E2)
 TOUCH_SCREEN_DEVICE="ELAN29E2:00 04F3:29E2"
-alias enable_touch="xinput list | grep '${TOUCH_SCREEN_DEVICE}' | grep -Eo 'id=[0-9]{2}' | cut -d '=' -f 2 | xargs xinput enable"
-alias disable_touch="xinput list | grep '${TOUCH_SCREEN_DEVICE}' | grep -Eo 'id=[0-9]{2}' | cut -d '=' -f 2 | xargs xinput disable"
+alias enable-touch="xinput list | grep '${TOUCH_SCREEN_DEVICE}' | grep -Eo 'id=[0-9]{2}' | cut -d '=' -f 2 | xargs xinput enable"
+alias disable-touch="xinput list | grep '${TOUCH_SCREEN_DEVICE}' | grep -Eo 'id=[0-9]{2}' | cut -d '=' -f 2 | xargs xinput disable"
 
 # DEFAULT CONFIG
 # --------------
